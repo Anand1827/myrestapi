@@ -27,8 +27,9 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+// Fix for deprecated `mainClassName` property
 bootJar {
-    mainClassName = 'com.example.demo.DemoApplication'
+    mainClass = 'com.example.demo.DemoApplication' // Replace with your main class path
 }
 
 // Ensure compatibility with Gradle 8.x
