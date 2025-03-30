@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        gradle 'gradle' // Ensure that Gradle is available from Jenkins' Global Tool Configuration
+    }
+
     stages {
         stage('Clone Repository') {
             steps {
@@ -10,7 +14,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh './gradlew build'
+                script {
+                    // Run Gradle build using the wrapper script if available
+                    sh './gradlew build'
+                }
             }
         }
     }
