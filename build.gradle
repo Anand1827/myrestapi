@@ -29,7 +29,7 @@ tasks.named('test') {
 
 // Fix for deprecated `mainClassName` property
 bootJar {
-    mainClass = 'com.example.demo.DemoApplication' // Replace with your main class path
+    mainClass = 'com.example.myrestapi.MyRestApiApplication' // Replace with your main class path
 }
 
 // Ensure compatibility with Gradle 8.x
